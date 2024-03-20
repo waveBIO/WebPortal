@@ -1,0 +1,2 @@
+// Beispiel Command für POST aufrufe
+curl -X POST --data @data.json http://localhost:5000/increment_value
