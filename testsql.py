@@ -9,24 +9,40 @@ password = 'SIGNUM'
 conn = pyodbc.connect('DRIVER={ODBC DRIVER 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
 
 cursor = conn.cursor()
-cursor.execute("select KONTEXT, TYPE, SUBTYPE, FID, ID, PID, TEXT, FTYPE from RSTRU where KONTEXT = 'KRED' and WEBPUBLISH = 1")
+cursor.execute("select KONTEXT, TYPE, SUBTYPE, FID, ID, PID, TEXT, FTYPE from RSTRU where KONTEXT = 'KRED' and WEBPUBLISH = 1")# KRED RSTRU
+rows1 = cursor.fetchall()
 
-rows = cursor.fetchall()
+results1 = []
 
-results = []
+for row in rows1:
 
-for row in rows:
-
-    row_dict = {
+    row_dict1 = {
         "FID" : row[3],
         "Text" : row[6],
         "FType" : row[7]
     }
 
-    results.append(row_dict)
+    results1.append(row_dict1)
 
-json_data = results
+json_data1 = results1
+###############################
+cursor.execute("select KONTEXT, TYPE, SUBTYPE, FID, ID, PID, TEXT, FTYPE from RSTRU where KONTEXT = 'ROHKRED' and WEBPUBLISH = 1")# ROHKRED RSTRU
+rows2 = cursor.fetchall()
 
-print(json_data)
+results2 = []
+
+for row in rows2:
+    row_dict2 = {
+        "FID" : row[3],
+        "Text" : row[6],
+        "FType" : row[7]
+    }
+
+    results2.append(row_dict2)
+
+json_data2 = results2
+
+print(json_data1)
+print(json_data2)
 
 cursor.close

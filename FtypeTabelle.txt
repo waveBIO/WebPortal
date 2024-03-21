@@ -1,0 +1,37 @@
+==========================================
+FTYPE |   Text                           |
+==========================================
+1     | Text(60 Zeichen)                 |
+2     | Text(variabel)                   |
+24    | Text(formatiert)                 |
+3     | Ganze Zahl                       |
+4     | Flieskommazahl                   |
+20    | Fließkommazahl erweitert         |
+14    | Währungsbetrag                   |
+23    | Berechnetes Feld                 |
+21    | Counter                          |
+5     | Ja/Nein                          |
+6     | Auswahl (A/B/C...)               |
+7     | MultiAuswahl (A+C+...)           |
+22    | Referenztabelle                  |
+29    | Referenztabelle MultiAuswahl     |
+31    | Tabelle                          |
+32    | Dialog                           |
+8     | Datum                            |
+9     | Datum+Zeit                       |
+26    | Zeit                             |
+10    | Bild                             |
+11    | Datei                            |
+18    | Datei-Verknüpfung                |
+27    | Datei-Ordner                     |
+12    | ArtNr                            |
+13    | Lieferant                        |
+25    | Länder                           |
+15    | Farbe                            |
+16    | eMail                            |
+33    | eMail (interaktiv)               |
+17    | URL                              |
+28    | User/UserGruppe                  |
+19    | Button                           |
+30    | Static                           |
+==========================================
